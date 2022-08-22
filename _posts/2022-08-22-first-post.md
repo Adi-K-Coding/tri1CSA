@@ -10,11 +10,11 @@ title: TT 1 Tools and Equipment
 
 ## Fastpages
 
-- [Python Jupyter Notebook]
+- [Python Jupyter Notebook](https://adi-k-coding.github.io/tri1CSA/2022/08/22/python.html)
 
-- [Java Jupyter Notebook]
+- [Java Jupyter Notebook](https://adi-k-coding.github.io/tri1CSA/2022/08/22/java.html)
 
-- [GitHub Insights for Fastpage]
-- [GitHub Insights on Java Project]
+- [GitHub Insights for Fastpage](https://github.com/Adi-K-Coding/tri1CSA/pulse)
+- [GitHub Insights on Java Project](https://github.com/Adi-K-Coding/Adi_SpringCSA/pulse)
 
 ## Java Project
