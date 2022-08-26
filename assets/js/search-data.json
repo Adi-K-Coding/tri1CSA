@@ -73,6 +73,22 @@
   
 
   
+      ,"page3": {
+          "title": "CSA Notes",
+          "content": "Key Vocab . Primitives char | int | double | boolean | short | long | . | Non Primitives String | Array | ArrayList | Queue | Stack | . | .",
+          "url": "https://adi-k-coding.github.io/tri1CSA/notes/",
+          "relUrl": "/notes/",
+          "date": ""
+      }
+      
+  
+
+  
+  
+
+  
+
+  
   
 
   
@@ -81,18 +97,13 @@
   
 
   
-
-  
   
 
   
   
 
   
-  
-
-  
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://adi-k-coding.github.io/tri1CSA/robots.txt",
