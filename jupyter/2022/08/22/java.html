@@ -179,52 +179,52 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// import java.util.Scanner;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GPACalc</span><span class="p">{</span>
+<span class="c1">// public class GPACalc{</span>
   
-    <span class="kt">void</span> <span class="nf">gradeCalc</span><span class="p">(){</span>
-        <span class="n">Scanner</span> <span class="n">inputClasses</span><span class="p">;</span>
-        <span class="n">inputClasses</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"How many classes do you have"</span><span class="p">);</span>
-        <span class="kt">int</span> <span class="n">classNumber</span> <span class="o">=</span> <span class="n">inputClasses</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n"</span><span class="o">+</span><span class="n">classNumber</span><span class="p">);</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">classNumber</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Now answer some questions about your grades"</span><span class="p">);</span>
-        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Why are you running this program"</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="n">inputClasses</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-        <span class="n">gradeForm</span><span class="p">(</span><span class="n">classNumber</span><span class="p">);</span>
-    <span class="p">}</span>
+<span class="c1">//     void gradeCalc(){</span>
+<span class="c1">//         Scanner inputClasses;</span>
+<span class="c1">//         inputClasses = new Scanner(System.in);</span>
+<span class="c1">//         System.out.print("How many classes do you have");</span>
+<span class="c1">//         int classNumber = inputClasses.nextInt();</span>
+<span class="c1">//         System.out.println("\n"+classNumber);</span>
+<span class="c1">//         if(classNumber!=0){</span>
+<span class="c1">//             System.out.println("Now answer some questions about your grades");</span>
+<span class="c1">//         }else{</span>
+<span class="c1">//             System.out.print("Why are you running this program");</span>
+<span class="c1">//         }</span>
+<span class="c1">//         inputClasses.close();</span>
+<span class="c1">//         gradeForm(classNumber);</span>
+<span class="c1">//     }</span>
 
-    <span class="kt">void</span> <span class="nf">gradeForm</span><span class="p">(</span><span class="kt">int</span> <span class="n">classNumber</span><span class="p">){</span>
-        <span class="n">Scanner</span> <span class="n">inputGrades</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="c1">// inputGrades.close();</span>
-        <span class="c1">// System.out.println("------");</span>
-        <span class="c1">// System.out.println("What is your grade in period 1");</span>
-        <span class="n">String</span> <span class="n">grade</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
-        <span class="c1">// grade = inputGrades.nextLine();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">grade</span><span class="p">);</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">classNumber</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------"</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"what is your grade in period "</span><span class="o">+</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
-            <span class="n">grade</span> <span class="o">=</span> <span class="n">inputGrades</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">grade</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="n">inputGrades</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-    <span class="p">}</span>   
+<span class="c1">//     void gradeForm(int classNumber){</span>
+<span class="c1">//         Scanner inputGrades = new Scanner(System.in);</span>
+<span class="c1">//         // inputGrades.close();</span>
+<span class="c1">//         // System.out.println("------");</span>
+<span class="c1">//         // System.out.println("What is your grade in period 1");</span>
+<span class="c1">//         String grade="";</span>
+<span class="c1">//         // grade = inputGrades.nextLine();</span>
+<span class="c1">//         System.out.println(grade);</span>
+<span class="c1">//         for(int i = 0; i &lt; classNumber;i++){</span>
+<span class="c1">//             System.out.println("-------");</span>
+<span class="c1">//             System.out.println("what is your grade in period "+(i+1));</span>
+<span class="c1">//             grade = inputGrades.nextLine();</span>
+<span class="c1">//             System.out.println(grade);</span>
+<span class="c1">//         }</span>
+<span class="c1">//         inputGrades.close();</span>
+<span class="c1">//     }   </span>
 
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
-    <span class="n">GPACalc</span> <span class="n">starter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GPACalc</span><span class="p">();</span>
-    <span class="n">starter</span><span class="p">.</span><span class="na">gradeCalc</span><span class="p">();</span>
-<span class="p">}</span>
+<span class="c1">// public static void main(String [] args){</span>
+<span class="c1">//     GPACalc starter = new GPACalc();</span>
+<span class="c1">//     starter.gradeCalc();</span>
+<span class="c1">// }</span>
     
-<span class="p">}</span>
+<span class="c1">// }</span>
 
 
 
-<span class="n">GPACalc</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="c1">// GPACalc.main(null);</span>
 </pre></div>
 
     </div>
@@ -347,17 +347,9 @@ what is your grade in period 2
 <pre>
 You have 5 classes
 Now answer some questions about your grades
-Your class score total is 14.0
-Your GPA is 2.8
+Your class score total is 20.0
+Your GPA is 4.0
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-The Kernel crashed while executing code in the the current cell or a previous cell. Please review the code in the cell(s) to identify a possible cause of the failure. Click &lt;a href='https://aka.ms/vscodeJupyterKernelCrash'&gt;here&lt;/a&gt; for more info. View Jupyter &lt;a href='command:jupyter.viewOutput'&gt;log&lt;/a&gt; for further details.</pre>
 </div>
 </div>
 
@@ -403,6 +395,70 @@ The Kernel crashed while executing code in the the current cell or a previous ce
 5
 it works
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span> 
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimeOrNot</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">primes</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">String</span> <span class="n">userInput</span> <span class="o">=</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="p">(</span><span class="s">"What range of numbers do you want to test?(2-number)"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">userInput</span><span class="p">);</span>
+        <span class="kt">boolean</span> <span class="n">isPrime</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">isPrime</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">isPrime</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">isPrime</span><span class="o">==</span><span class="kc">true</span><span class="p">){</span>
+                <span class="c1">// System.out.println(i+" is a prime number");</span>
+                <span class="n">primes</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+             <span class="p">}</span>
+            <span class="c1">//  else{</span>
+            <span class="c1">//     System.out.println(i+" is not a prime number");</span>
+            <span class="c1">// }</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Primes between 2 and "</span><span class="o">+</span><span class="n">x</span><span class="o">+</span><span class="s">": "</span><span class="o">+</span><span class="s">"3 "</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="p">:</span> <span class="n">primes</span><span class="p">)</span>
+	      <span class="p">{</span> 		      
+	           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num</span><span class="o">+</span><span class="s">" "</span><span class="p">);</span> 		
+	      <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">PrimeOrNot</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Primes between 2 and 20: 3 5 7 11 13 17 19 </pre>
 </div>
 </div>
 
