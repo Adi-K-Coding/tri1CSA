@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Title",
+            "title": "Python Jupyter Notebook",
             "content": "print(&quot;Hello World&quot;) . Hello World .",
-            "url": "https://adi-k-coding.github.io/tri1CSA/2022/08/22/python.html",
-            "relUrl": "/2022/08/22/python.html",
+            "url": "https://adi-k-coding.github.io/tri1CSA/jupyter/2022/08/22/python.html",
+            "relUrl": "/jupyter/2022/08/22/python.html",
             "date": " • Aug 22, 2022"
         }
         
