@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -179,68 +179,6 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// import java.util.Scanner;</span>
-
-<span class="c1">// public class GPACalc{</span>
-  
-<span class="c1">//     void gradeCalc(){</span>
-<span class="c1">//         Scanner inputClasses;</span>
-<span class="c1">//         inputClasses = new Scanner(System.in);</span>
-<span class="c1">//         System.out.print("How many classes do you have");</span>
-<span class="c1">//         int classNumber = inputClasses.nextInt();</span>
-<span class="c1">//         System.out.println("\n"+classNumber);</span>
-<span class="c1">//         if(classNumber!=0){</span>
-<span class="c1">//             System.out.println("Now answer some questions about your grades");</span>
-<span class="c1">//         }else{</span>
-<span class="c1">//             System.out.print("Why are you running this program");</span>
-<span class="c1">//         }</span>
-<span class="c1">//         inputClasses.close();</span>
-<span class="c1">//         gradeForm(classNumber);</span>
-<span class="c1">//     }</span>
-
-<span class="c1">//     void gradeForm(int classNumber){</span>
-<span class="c1">//         Scanner inputGrades = new Scanner(System.in);</span>
-<span class="c1">//         // inputGrades.close();</span>
-<span class="c1">//         // System.out.println("------");</span>
-<span class="c1">//         // System.out.println("What is your grade in period 1");</span>
-<span class="c1">//         String grade="";</span>
-<span class="c1">//         // grade = inputGrades.nextLine();</span>
-<span class="c1">//         System.out.println(grade);</span>
-<span class="c1">//         for(int i = 0; i &lt; classNumber;i++){</span>
-<span class="c1">//             System.out.println("-------");</span>
-<span class="c1">//             System.out.println("what is your grade in period "+(i+1));</span>
-<span class="c1">//             grade = inputGrades.nextLine();</span>
-<span class="c1">//             System.out.println(grade);</span>
-<span class="c1">//         }</span>
-<span class="c1">//         inputGrades.close();</span>
-<span class="c1">//     }   </span>
-
-<span class="c1">// public static void main(String [] args){</span>
-<span class="c1">//     GPACalc starter = new GPACalc();</span>
-<span class="c1">//     starter.gradeCalc();</span>
-<span class="c1">// }</span>
-    
-<span class="c1">// }</span>
-
-
-
-<span class="c1">// GPACalc.main(null);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
 
@@ -309,8 +247,8 @@ window.onload = wrap_img;
 <pre>
 You have 5 classes
 Now answer some questions about your grades
-Your class score total is 16.0
-Your GPA is 3.2
+Your class score total is 17.0
+Your GPA is 3.4
 </pre>
 </div>
 </div>
@@ -421,9 +359,174 @@ it works
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Primes between 2 and 16: 3 5 7 11 13 </pre>
+<pre>Primes between 2 and 300: 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109 113 127 131 137 139 149 151 157 163 167 173 179 181 191 193 197 199 211 223 227 229 233 239 241 251 257 263 269 271 277 281 283 293 </pre>
 </div>
 </div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NumGuesser</span> <span class="p">{</span>
+    <span class="n">Random</span> <span class="n">rand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+        <span class="kt">boolean</span> <span class="n">numCorrect</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">uGuess</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">numGuesses</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    
+    <span class="kt">void</span> <span class="nf">run</span><span class="p">(){</span>
+        
+        <span class="kt">int</span> <span class="n">randNum</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">numCorrect</span><span class="o">==</span><span class="kc">false</span><span class="p">){</span>
+            <span class="n">uGuess</span> <span class="o">=</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="p">(</span><span class="s">"Guess the number between 1-1000"</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">uGuessNum</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">uGuess</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">uGuessNum</span><span class="o">&gt;</span><span class="n">randNum</span><span class="p">){</span>
+                <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">"Guess too high, try again. Previous guess: "</span><span class="o">+</span><span class="n">uGuessNum</span><span class="p">);</span>
+                <span class="n">numGuesses</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">uGuessNum</span><span class="o">&lt;</span><span class="n">randNum</span><span class="p">){</span>
+                <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">"Guess too low, try again. Previous guess: "</span><span class="o">+</span><span class="n">uGuessNum</span><span class="p">);</span>
+                <span class="n">numGuesses</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">uGuessNum</span><span class="o">==</span><span class="n">randNum</span><span class="p">){</span>
+                <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">"Correct! It took you "</span><span class="o">+</span><span class="n">numGuesses</span><span class="o">+</span><span class="s">" guesses to get it correct"</span><span class="p">);</span>
+                <span class="n">numCorrect</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NumGuesser</span> <span class="n">ng</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NumGuesser</span><span class="p">();</span>
+        <span class="n">ng</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">NumGuesser</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">java.lang.NumberFormatException: Cannot parse null string</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.lang.Integer.parseInt(Integer.java:630)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.lang.Integer.parseInt(Integer.java:786)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at NumGuesser.run(#29:1)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at NumGuesser.main(#29:1)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at .(#30:1)</span></pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+The Kernel crashed while executing code in the the current cell or a previous cell. Please review the code in the cell(s) to identify a possible cause of the failure. Click &lt;a href='https://aka.ms/vscodeJupyterKernelCrash'&gt;here&lt;/a&gt; for more info. View Jupyter &lt;a href='command:jupyter.viewOutput'&gt;log&lt;/a&gt; for further details.</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.swing.JPanel</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.swing.JLabel</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.swing.JButton</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.swing.JTextField</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.awt.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.awt.event.*</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculator</span> <span class="kd">implements</span> <span class="n">ActionListener</span><span class="p">{</span>
+    <span class="n">JFrame</span> <span class="n">frame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JFrame</span><span class="p">();</span>
+    <span class="n">JPanel</span> <span class="n">panel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JPanel</span><span class="p">();</span>
+    <span class="n">JButton</span> <span class="n">addButton</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">"Addition"</span><span class="p">);</span>
+    <span class="n">JButton</span> <span class="n">subtractButton</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">"Subtraction"</span><span class="p">);</span>
+    <span class="n">JButton</span> <span class="n">multiplyButton</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">"Multiplication"</span><span class="p">);</span>
+    <span class="n">JButton</span> <span class="n">divideButton</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">"Division"</span><span class="p">);</span>
+    <span class="n">JTextField</span> <span class="n">field1String</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+    <span class="n">JTextField</span> <span class="n">field2String</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+    <span class="n">JLabel</span> <span class="n">label</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="p">();</span>
+    
+    <span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">panel</span><span class="p">);</span>
+        <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">field1String</span><span class="p">);</span>
+        <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">field2String</span><span class="p">);</span>
+        <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">addButton</span><span class="p">);</span>
+        <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">subtractButton</span><span class="p">);</span>
+        <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">multiplyButton</span><span class="p">);</span>
+        <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">divideButton</span><span class="p">);</span>
+        <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">label</span><span class="p">);</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
+        <span class="n">addButton</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="n">subtractButton</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="n">multiplyButton</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="n">divideButton</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="k">new</span> <span class="n">Dimension</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">));</span>
+    <span class="p">}</span>  
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Calculator</span> <span class="n">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">();</span>
+        <span class="n">calc</span><span class="p">.</span><span class="na">setup</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">field1</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">field1String</span><span class="p">.</span><span class="na">getText</span><span class="p">());</span>
+        <span class="kt">double</span> <span class="n">field2</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">field2String</span><span class="p">.</span><span class="na">getText</span><span class="p">());</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getSource</span><span class="p">()</span><span class="o">==</span><span class="n">addButton</span><span class="p">){</span>
+            <span class="n">String</span> <span class="n">addF</span> <span class="o">=</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">((</span><span class="n">field1</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">field2</span><span class="p">));</span>
+            <span class="n">label</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">addF</span><span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getSource</span><span class="p">()</span><span class="o">==</span><span class="n">subtractButton</span><span class="p">){</span>
+            <span class="n">String</span> <span class="n">subF</span> <span class="o">=</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">((</span><span class="n">field1</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">field2</span><span class="p">));</span>
+            <span class="n">label</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">subF</span><span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getSource</span><span class="p">()</span><span class="o">==</span><span class="n">multiplyButton</span><span class="p">){</span>
+            <span class="n">String</span> <span class="n">mulF</span> <span class="o">=</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">((</span><span class="n">field1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">field2</span><span class="p">));</span>
+            <span class="n">label</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">mulF</span><span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getSource</span><span class="p">()</span><span class="o">==</span><span class="n">divideButton</span><span class="p">){</span>
+            <span class="n">String</span> <span class="n">divF</span> <span class="o">=</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">((</span><span class="n">field1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">field2</span><span class="p">));</span>
+            <span class="n">label</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">divF</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+
+<span class="n">Calculator</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
 
 <div class="output_area">
 
