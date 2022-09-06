@@ -84,7 +84,7 @@
   
       ,"page2": {
           "title": "CB Notes",
-          "content": "Evidence of Code.org lessons 1-5 completion . . Painter myPainter = new Painter(); . This line creates a new object of the painter class called myPainter, and this object can be used to call other methods of the painter class. This includes move(), paint(“color”), etc. .",
+          "content": "Evidence of Code.org lessons 1-5 completion . . Evidence of Code.org lessons 6-15 completion . . Painter myPainter = new Painter(); . This line creates a new object of the painter class called myPainter, and this object can be used to call other methods of the painter class. This includes move(), paint(“color”), etc. .",
           "url": "https://adi-k-coding.github.io/tri1CSA/collegeboard/",
           "relUrl": "/collegeboard/",
           "date": ""
