@@ -14,3 +14,6 @@ permalink: /collegeboard/
 Painter myPainter = new Painter(); 
 
 This line creates a new object of the painter class called myPainter, and this object can be used to call other methods of the painter class. This includes move(), paint("color"), etc. 
+
+
+Inheritance- Super and subclasses, sublclasses can use functions, fields, methods from super class. In addition, the subclass can add its own fields and methods in addition to the superclass fields and methods.
