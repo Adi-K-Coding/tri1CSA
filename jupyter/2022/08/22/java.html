@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -331,18 +331,18 @@ it works
                 <span class="p">}</span>
             <span class="p">}</span>
             <span class="k">if</span><span class="p">(</span><span class="n">isPrime</span><span class="o">==</span><span class="kc">true</span><span class="p">){</span>
-                <span class="c1">// System.out.println(i+" is a prime number");</span>
                 <span class="n">primes</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
              <span class="p">}</span>
-            <span class="c1">//  else{</span>
-            <span class="c1">//     System.out.println(i+" is not a prime number");</span>
-            <span class="c1">// }</span>
         <span class="p">}</span>
+        
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Primes between 2 and "</span><span class="o">+</span><span class="n">x</span><span class="o">+</span><span class="s">": "</span><span class="o">+</span><span class="s">"3 "</span><span class="p">);</span>
+        <span class="n">String</span> <span class="n">outputStr</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="p">:</span> <span class="n">primes</span><span class="p">)</span>
 	      <span class="p">{</span> 		      
-	           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num</span><span class="o">+</span><span class="s">" "</span><span class="p">);</span> 		
+	         <span class="n">outputStr</span> <span class="o">=</span> <span class="n">outputStr</span> <span class="o">+</span> <span class="n">num</span> <span class="o">+</span><span class="s">" "</span> <span class="p">;</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num</span><span class="o">+</span><span class="s">" "</span><span class="p">);</span> 		
 	      <span class="p">}</span>
+          <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="s">"Primes between 2 and "</span><span class="o">+</span><span class="n">x</span><span class="o">+</span><span class="s">": "</span><span class="o">+</span><span class="s">"3 "</span><span class="o">+</span><span class="n">outputStr</span> <span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -359,7 +359,7 @@ it works
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Primes between 2 and 300: 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109 113 127 131 137 139 149 151 157 163 167 173 179 181 191 193 197 199 211 223 227 229 233 239 241 251 257 263 269 271 277 281 283 293 </pre>
+<pre>Primes between 2 and 50: 3 5 7 11 13 17 19 23 29 31 37 41 43 47 </pre>
 </div>
 </div>
 
@@ -542,24 +542,28 @@ The Kernel crashed while executing code in the the current cell or a previous ce
 <span class="kn">import</span> <span class="nn">javax.swing.JTextField</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">java.awt.*</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">java.awt.event.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Menu</span> <span class="kd">implements</span> <span class="n">ActionListener</span> <span class="p">{</span>
     <span class="n">JFrame</span> <span class="n">frame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JFrame</span><span class="p">(</span><span class="s">"Math Functions"</span><span class="p">);</span>
     <span class="n">JPanel</span> <span class="n">panel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JPanel</span><span class="p">();</span>
-    <span class="n">JButton</span> <span class="n">f1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">"Function 1"</span><span class="p">);</span>
-    <span class="n">JButton</span> <span class="n">f2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">"Function 2"</span><span class="p">);</span>
+    <span class="n">JButton</span> <span class="n">f1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">"Binary to Decimal Converter"</span><span class="p">);</span>
+    <span class="n">JButton</span> <span class="n">f2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">"Prime Number In Range"</span><span class="p">);</span>
+    <span class="n">JButton</span> <span class="n">f3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">"Odd or Even Checker"</span><span class="p">);</span>
     <span class="n">JLabel</span> <span class="n">label</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="p">();</span>
 
     <span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">frame</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">panel</span><span class="p">);</span>
         <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">f1</span><span class="p">);</span>
         <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">f2</span><span class="p">);</span>
+        <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">f3</span><span class="p">);</span>
         <span class="n">frame</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
         <span class="n">frame</span><span class="p">.</span><span class="na">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
         <span class="n">f1</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
         <span class="n">f2</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="n">f3</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
         <span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">label</span><span class="p">);</span>
-        <span class="n">frame</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="k">new</span> <span class="n">Dimension</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">));</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="k">new</span> <span class="n">Dimension</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">300</span><span class="p">));</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
@@ -567,12 +571,62 @@ The Kernel crashed while executing code in the the current cell or a previous ce
         <span class="n">m</span><span class="p">.</span><span class="na">setup</span><span class="p">();</span>
     <span class="p">}</span>
 
+    <span class="kt">void</span> <span class="nf">convertBinaryStringToDecimalInt</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">uInputNum</span> <span class="o">=</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="p">(</span><span class="s">"Enter a binary number to convert to a decimal"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">uInputNum</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">uInputNum</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">==</span><span class="sc">'1'</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">total</span><span class="o">+=</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">));</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="s">"Decimal: "</span><span class="o">+</span> <span class="n">total</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="nf">primesFunction</span><span class="p">(){</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">primes</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">String</span> <span class="n">userInput</span> <span class="o">=</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="p">(</span><span class="s">"What range of numbers do you want to test?(2-number)"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">userInput</span><span class="p">);</span>
+        <span class="kt">boolean</span> <span class="n">isPrime</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">isPrime</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">isPrime</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">isPrime</span><span class="o">==</span><span class="kc">true</span><span class="p">){</span>
+                
+                <span class="n">primes</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">String</span> <span class="n">outputStr</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="p">:</span> <span class="n">primes</span><span class="p">)</span>
+	      <span class="p">{</span> 		      
+	         <span class="n">outputStr</span> <span class="o">=</span> <span class="n">outputStr</span> <span class="o">+</span> <span class="n">num</span> <span class="o">+</span><span class="s">" "</span> <span class="p">;</span>
+	      <span class="p">}</span>
+          <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="s">"Primes between 2 and "</span><span class="o">+</span><span class="n">x</span><span class="o">+</span><span class="s">": "</span><span class="o">+</span><span class="s">"3 "</span><span class="o">+</span><span class="n">outputStr</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="nf">oddOrEven</span><span class="p">(){</span>
+        <span class="n">String</span> <span class="n">inp</span> <span class="o">=</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="p">(</span><span class="s">"Enter a number to check"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">inp1</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">inp</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">inp1</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+            <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="n">inp1</span><span class="o">+</span><span class="s">" is a even number!"</span><span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="n">inp1</span><span class="o">+</span><span class="s">" is a odd number!"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getSource</span><span class="p">()</span> <span class="o">==</span> <span class="n">f1</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">label</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">"function 1 clicked"</span><span class="p">);</span>
+            <span class="n">convertBinaryStringToDecimalInt</span><span class="p">();</span>
         <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getSource</span><span class="p">()</span> <span class="o">==</span> <span class="n">f2</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">label</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">"function 2 clicked"</span><span class="p">);</span>
+            <span class="n">primesFunction</span><span class="p">();</span>
+        <span class="p">}</span><span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getSource</span><span class="p">()</span> <span class="o">==</span> <span class="n">f3</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">oddOrEven</span><span class="p">();</span>
         <span class="p">}</span>
 
     <span class="p">}</span>
@@ -634,6 +688,21 @@ The Kernel crashed while executing code in the the current cell or a previous ce
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">BinaryToDecimal.main(null);</span>
+<span class="ansi-red-intense-fg ansi-bold">Evaluation interrupted.</span></pre>
+</div>
+</div>
+
 </div>
 </div>
 
