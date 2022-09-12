@@ -9,17 +9,15 @@ title: Focus and Habits
 
 
 ## Insights and Takeaways/Vocabulary
-- People have a lot more control over their happiness than they think they do. A lot more is in our own control than we think. 
-- Materialistic things do not matter as much as we think they do
-- Bad things will happen in life and removing them will not ensure happiness as research shows that people who have experienced tragedies in their life are happy as they have found a meaning for life
-- Knowing is half the battle so we must put in the work to be able to actually experience that happiness
-- We always want moe than what we have but we have to train ourselves to be content
-- Helping others will help us become happier as we feel like we are living for someone other than oursleves
-- Prioritize social connection does not have to be deep or long it can be with anyone
-- Make time for gratitude like make a list of things we are grateful for
-- Healthy practices matter we should be getting enough sleep and exercise can help us feel more awake and connected in what we are learning
-- Be present in the moment as mind-wandering can lead to a decrease in mood despite the topic. Notice what you feel like when you are doing something like eating ice cream.
-- Become wealthy in terms of time. People who are really happy are willing to spend money for time affluence. 
+- Excercise, getting enough sleep, time management are all good and healhthy practices that help to increase practice. 
+- Making relationships and connections with people goes a long way toward increasing our happiness.
+- Oftentimes, we value materialistic things over happiness, but happiness is more important and we should place less emphassis on materialistic goods. 
+- Whenever we get something new, our first reaction is to wish for something else, but we have to learn to be content with what we have. 
+- We won't always have good days, but bad days are not necesarily bad in the grand scheme of things because we learn from them.
+- People have a lot more control over their happiness than they think they do. A lot more is in our own control than we think.  
+- Helping other people with things, no matter how small, really does have a positve impact on oneself. 
+- People should make lists of things that they are grateful for, as it helps one realize how much they really have. 
+
 
 ## Goals
 - Get good grades this year
