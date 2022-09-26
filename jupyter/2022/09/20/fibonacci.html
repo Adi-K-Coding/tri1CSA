@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -144,19 +144,35 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FiboFor</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">String</span> <span class="n">inpStr</span> <span class="o">=</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="p">(</span><span class="s">"How many fibonacci numbers would you like to print"</span><span class="p">);</span>
-      <span class="kt">int</span> <span class="n">intNum</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">inpStr</span><span class="p">);</span>
-      <span class="kt">int</span> <span class="n">firstNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="kt">int</span> <span class="n">secondNum</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FiboFor</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span>
+
+
+  <span class="kd">public</span> <span class="nf">FiboFor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">super</span><span class="p">();</span>
+<span class="p">}</span>
   
-      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">intNum</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">firstNum</span> <span class="o">+</span> <span class="s">", "</span><span class="p">);</span>
-        <span class="kt">int</span> <span class="n">nextNum</span> <span class="o">=</span> <span class="n">firstNum</span> <span class="o">+</span> <span class="n">secondNum</span><span class="p">;</span>
-        <span class="n">firstNum</span> <span class="o">=</span> <span class="n">secondNum</span><span class="p">;</span>
-        <span class="n">secondNum</span> <span class="o">=</span> <span class="n">nextNum</span><span class="p">;</span>
-      <span class="p">}</span>
+  <span class="kd">public</span> <span class="nf">FiboFor</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//initialize fibonacci and time mvc</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">nth</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">String</span> <span class="n">inpStr</span> <span class="o">=</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="p">(</span><span class="s">"How many fibonacci numbers would you like to print"</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">intNum</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">inpStr</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">firstNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">secondNum</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">intNum</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">firstNum</span> <span class="o">+</span> <span class="s">", "</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">nextNum</span> <span class="o">=</span> <span class="n">firstNum</span> <span class="o">+</span> <span class="n">secondNum</span><span class="p">;</span>
+    <span class="n">firstNum</span> <span class="o">=</span> <span class="n">secondNum</span><span class="p">;</span>
+    <span class="n">secondNum</span> <span class="o">=</span> <span class="n">nextNum</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">FiboFor</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FiboFor</span><span class="p">();</span>
+      
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -172,11 +188,134 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, </pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">  public </span><span class="ansi-black-intense-fg ansi-bold">Fibo() {</span>
+<span class="ansi-red-intense-fg ansi-bold">invalid method declaration; return type required</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">  public </span><span class="ansi-black-intense-fg ansi-bold">Fibo(int nth) {</span>
+<span class="ansi-red-intense-fg ansi-bold">invalid method declaration; return type required</span>
+</pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fibo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Fibo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">firstNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">secondNum</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">(){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"It works"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FiboFor</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span>
+   
+
+    <span class="kd">public</span> <span class="nf">FiboFor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">inpStr</span> <span class="o">=</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="p">(</span><span class="s">"How many fibonacci numbers would you like to print"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">intNum</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">inpStr</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">firstNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">secondNum</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">intNum</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">firstNum</span> <span class="o">+</span> <span class="s">", "</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">nextNum</span> <span class="o">=</span> <span class="n">firstNum</span> <span class="o">+</span> <span class="n">secondNum</span><span class="p">;</span>
+            <span class="n">firstNum</span> <span class="o">=</span> <span class="n">secondNum</span><span class="p">;</span>
+            <span class="n">secondNum</span> <span class="o">=</span> <span class="n">nextNum</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        </span><span class="ansi-black-intense-fg ansi-bold">public void init(){</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal start of expression</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fibo</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="n">name</span><span class="p">;</span>  <span class="c1">// name or title of method</span>
+    <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>  <span class="c1">// nth sequence</span>
+    
+
+    <span class="cm">/*</span>
+<span class="cm">     Zero parameter constructor uses Telescoping technique to allow setting of the required value nth</span>
+<span class="cm">     @param: none</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Fibo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span> <span class="c1">// telescope to avoid code duplication, using default as 20</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Construct the nth fibonacci number</span>
+<span class="cm">     @param: nth number, the value is constrained to 92 because of overflow in a long</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Fibo</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
+        <span class="c1">//initialize fibonacci and time mvc</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     This Method should be "abstract"</span>
+<span class="cm">     Leave method as protected, as it is only authorized to extender of the class</span>
+<span class="cm">     Make new class that extends and defines init()</span>
+<span class="cm">     Inside references within this class would change from this to super</span>
+<span class="cm">     Repeat process using for, while, recursion</span>
+<span class="cm">     */</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -278,6 +417,14 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+The Kernel crashed while executing code in the the current cell or a previous cell. Please review the code in the cell(s) to identify a possible cause of the failure. Click &lt;a href='https://aka.ms/vscodeJupyterKernelCrash'&gt;here&lt;/a&gt; for more info. View Jupyter &lt;a href='command:jupyter.viewOutput'&gt;log&lt;/a&gt; for further details.</pre>
 </div>
 </div>
 
