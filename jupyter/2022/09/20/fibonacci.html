@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -135,6 +135,115 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">com.fibonacci</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.swing.plaf.synth.SynthStyle</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Fibo</span> <span class="p">{</span><span class="c1">//Creating super class Fibo</span>
+    <span class="kt">int</span> <span class="n">nth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//integer that will define how many times to print</span>
+
+    <span class="kd">public</span> <span class="nf">Fibo</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span><span class="c1">//constructor of super class, will be called later on</span>
+        <span class="c1">//defining variables</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">nth</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+    <span class="p">}</span>
+
+
+<span class="c1">//init of super class, leave as protected and as abstract</span>
+    <span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">();</span>
+
+<span class="c1">//main method in super class, calling different for, while recursion methods with different values to print</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Fibo</span> <span class="n">ff1</span><span class="o">=</span> <span class="k">new</span> <span class="n">FiboFor</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">Fibo</span> <span class="n">ff2</span><span class="o">=</span> <span class="k">new</span> <span class="n">FiboFor</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span>
+    <span class="n">Fibo</span> <span class="n">fw1</span><span class="o">=</span> <span class="k">new</span> <span class="n">FiboWhile</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+    <span class="n">Fibo</span> <span class="n">fw2</span><span class="o">=</span> <span class="k">new</span> <span class="n">FiboWhile</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+    <span class="n">Fibo</span> <span class="n">fr1</span><span class="o">=</span> <span class="k">new</span> <span class="n">FiboRecursion</span><span class="p">(</span><span class="mi">18</span><span class="p">);</span>
+    <span class="n">Fibo</span> <span class="n">fr2</span><span class="o">=</span> <span class="k">new</span> <span class="n">FiboRecursion</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">FiboFor</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span><span class="c1">//For loop fibonacci</span>
+
+    <span class="kd">public</span> <span class="nf">FiboFor</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">){</span>
+        <span class="c1">//Constructor of sub class that makes call to super class</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">nth</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">(){</span>
+        <span class="c1">//this is the init method of the subclass, which houses the actual code for the for loop</span>
+        <span class="kt">int</span> <span class="n">firstNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">secondNum</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n\nPrinting Using For Loops:\n"</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">nth</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">firstNum</span> <span class="o">+</span> <span class="s">", "</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">nextNum</span> <span class="o">=</span> <span class="n">firstNum</span> <span class="o">+</span> <span class="n">secondNum</span><span class="p">;</span>
+            <span class="n">firstNum</span> <span class="o">=</span> <span class="n">secondNum</span><span class="p">;</span>
+            <span class="n">secondNum</span> <span class="o">=</span> <span class="n">nextNum</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">FiboWhile</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span><span class="c1">//While loop fibonacci</span>
+
+    <span class="kd">public</span> <span class="nf">FiboWhile</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">){</span>
+         <span class="c1">//Constructor of sub class that makes call to super class</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">nth</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">(){</span>
+        <span class="c1">//this is the init method of the subclass, which houses the actual code for the while loop</span>
+        <span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">firstNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">secondNum</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n\nPrinting Using While Loops:\n"</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">start</span> <span class="o">&lt;=</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">firstNum</span> <span class="o">+</span> <span class="s">", "</span><span class="p">);</span>
+      <span class="kt">int</span> <span class="n">nextNum</span> <span class="o">=</span> <span class="n">firstNum</span> <span class="o">+</span> <span class="n">secondNum</span><span class="p">;</span>
+      <span class="n">firstNum</span> <span class="o">=</span> <span class="n">secondNum</span><span class="p">;</span>
+      <span class="n">secondNum</span> <span class="o">=</span> <span class="n">nextNum</span><span class="p">;</span>
+      <span class="n">start</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">FiboRecursion</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span><span class="c1">//Recursion fibonacci</span>
+
+    <span class="kd">public</span> <span class="nf">FiboRecursion</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">){</span>
+         <span class="c1">//Constructor of sub class that makes call to super class</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">nth</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fibRecursion</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="c1">//deals with case if initial input was 0</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+            <span class="c1">//deals with case if initial input was 1 or 2, which will return 1</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> 
+        <span class="p">}</span>
+        <span class="c1">//keeps making calls to itself, until number of calls left is 0, which is how recursion works</span>
+        <span class="k">return</span> <span class="n">fibRecursion</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibRecursion</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">(){</span>
+        <span class="c1">//this is the init method of the subclass, which houses the actual code for the recursion</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n\nPrinting Using Recursion:\n"</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nth</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">fibRecursion</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span><span class="s">", "</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 </div>
 
 
