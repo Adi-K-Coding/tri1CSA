@@ -238,7 +238,7 @@
   
       ,"page3": {
           "title": "Finals Blog",
-          "content": "",
+          "content": "MCQ Question Final + Corrections . Score: . Question My Answer Correct Answer Explanation . Question 8 | E | C | The correct answer doesn’t have option III as a correct answer. Only I and II. III does not work because the int 15 should not be in quotes. When put in quotes, it becomes a string. That is why it doesn’t work | . Question 9 | C | B | For this question, the correct answer is sum += key [i - 1] ; | . Question 15 | C | C | Explanation | . Question 17 | C | C | Explanation | . Question 25 | C | C | Explanation | . Question 30 | C | C | Explanation | . Question 37 | C | C | Explanation | . .",
           "url": "https://adi-k-coding.github.io/tri1CSA/finalsblog/",
           "relUrl": "/finalsblog/",
           "date": ""
