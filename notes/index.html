@@ -108,6 +108,94 @@ window.onload = wrap_img;
   </li>
 </ul>
 
+<h3 id="ap-test-breakdown">AP Test breakdown</h3>
+<ul>
+  <li>Primitive Types: 2.5%–5% of test questions</li>
+  <li>Using Objects: 5%–7.5% of test questions</li>
+  <li>Boolean Expressions and if Statements: 15%–17.5% of test questions</li>
+  <li>Iteration: 17.5%–22.5% of test questions</li>
+  <li>Writing Classes: 5%–7.5% of test questions</li>
+  <li>Array: 10%–15% of test questions</li>
+  <li>ArrayList: 2.5%–7.5% of test questions</li>
+  <li>2D Array: 7.5%–10% of test questions</li>
+  <li>Inheritance: 5%–10% of test questions</li>
+  <li>Recursion: 5%–7.5% of test questions</li>
+</ul>
+
+<h3 id="comments">Comments</h3>
+<p>Long Comment</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                    <span class="cm">/*
+                     *  This is
+                     *  a long comment.
+                     */</span>
+</code></pre></div></div>
+
+<p>Short Comment</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This is a short comment.</span>
+</code></pre></div></div>
+
+<h3 id="randoms">Randoms:</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Random</span> <span class="n">generator</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Random</span><span class="o">();</span>
+<span class="n">generator</span><span class="o">.</span><span class="na">nextInt</span><span class="o">(</span><span class="n">n</span><span class="o">);</span>
+</code></pre></div></div>
+<h3 id="arraylists">Arraylists</h3>
+<p><a href="https://adi-k-coding.github.io/tri1CSA/jupyter/2022/10/06/arraylists.html">Link to notebook</a></p>
+
+<h3 id="apis">APIs</h3>
+<p><a href="https://adi-k-coding.github.io/tri1CSA/jupyter/2022/09/22/javaAPI.html">Link to notebook</a></p>
+
+<h3 id="java-naming-conventions">Java Naming Conventions:</h3>
+<p>Java uses camelCase. This is the typical naming convention when naming variables, methods, and other objects. Camel case makes the code easier to follow and read.</p>
+
+<h3 id="operators">Operators:</h3>
+<ul>
+  <li>public: anything outside of the class</li>
+  <li>private: can only be used within the class</li>
+  <li>protected: not used at this time</li>
+</ul>
+
+<h3 id="recursion">Recursion</h3>
+<ul>
+  <li>For loops
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>  
+     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>  
+ <span class="o">}</span>  
+</code></pre></div>    </div>
+  </li>
+  <li>While loops
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span>  
+ <span class="k">while</span><span class="o">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="o">){</span>  
+     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>  
+ <span class="n">i</span><span class="o">++;</span>  
+ <span class="o">}</span>  
+</code></pre></div>    </div>
+  </li>
+  <li>Recursion loops
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">static</span> <span class="kt">int</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>  
+<span class="kd">static</span> <span class="kt">void</span> <span class="nf">p</span><span class="o">(){</span>  
+ <span class="n">count</span><span class="o">++;</span>  
+ <span class="k">if</span><span class="o">(</span><span class="n">count</span><span class="o">&lt;=</span><span class="mi">5</span><span class="o">){</span>  
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>  
+ <span class="n">p</span><span class="o">();</span>  
+ <span class="o">}</span>  
+<span class="o">}</span>  
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>  
+ <span class="n">p</span><span class="o">();</span>  
+<span class="o">}</span>  
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="inhertitance">Inhertitance</h3>
+<p><img src="https://user-images.githubusercontent.com/34950822/200631617-b652dc9c-624e-4e0c-9c52-f8ad2eae1bad.png" alt="image" /></p>
+
+<ul>
+  <li>The most important use of inheritance in Java is code reusability. The code that is present in the parent class can be directly used by the child class.</li>
+  <li>The idea behind inheritance in Java is that you can create new classes
+that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of the parent class. Moreover, you can add new methods and fields in your current class also.</li>
+</ul>
+
+
   </div>
 
 </article>
