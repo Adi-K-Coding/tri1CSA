@@ -148,5 +148,7 @@ public void addMembers(String[] names, int gradYear ){
 
 ```
 # Unit 6 - Array
+Notes: Common errors when making arrays include bound errors, unfilled and uninitialized arrays, when you allocate, or assign a single array variable, but not the whole array. You can use for loops to iterate through an array, by using array.length
 [Link to Homework](https://adi-k-coding.github.io/tri1CSA/jupyter/2022/11/07/array.html)
+
 
