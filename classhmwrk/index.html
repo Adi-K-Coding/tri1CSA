@@ -94,6 +94,99 @@ window.onload = wrap_img;
 <span class="o">}</span>
 </code></pre></div></div>
 
+<h1 id="unit-2---oop">Unit 2 - OOP</h1>
+<p>OOP or object oriented programming is a type of programming language. Classes are a template or blueprint from which objects are created. Objects are instances of a class. Methods are a set of code that perform a specific task. Classes in java can hace data members, methods, constructors, nested classes, and interfaces.</p>
+
+<p><a href="https://adi-k-coding.github.io/tri1CSA/jupyter/2022/11/07/OOP.html">Link to Homework</a></p>
+
+<h1 id="unit-3---boolean-expressions-and-if-statements">Unit 3 - Boolean Expressions and If Statements</h1>
+<p>If/else statements allow you to create a code segment that has checks. If/ElseIf/Else statments can be used to decide different program outputs depending on what the user inputted. Switch statements are also an alternative method to if statements.</p>
+
+<p>HW:
+2009 3A.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">int</span> <span class="nf">getChargingCost</span><span class="o">(</span><span class="kt">int</span> <span class="n">startHour</span><span class="o">,</span> <span class="kt">int</span> <span class="n">chargeTime</span><span class="o">)</span>
+<span class="o">{</span>
+ <span class="kt">int</span> <span class="n">cost</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+ <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">chargeTime</span><span class="o">;</span> <span class="n">x</span><span class="o">++){</span>
+  <span class="n">cost</span> <span class="o">+=</span> <span class="k">this</span><span class="o">.</span><span class="na">rateTable</span><span class="o">[(</span><span class="n">startHour</span> <span class="o">+</span> <span class="n">x</span><span class="o">)</span> <span class="o">%</span> <span class="mi">24</span><span class="o">];</span>
+ <span class="o">}</span>
+ <span class="k">return</span> <span class="n">cost</span><span class="o">;</span>
+<span class="o">}</span> 
+</code></pre></div></div>
+
+<p>2017 1B.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isStrictlyIncreasing</span><span class="o">(){</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">digitList</span><span class="o">.</span><span class="na">size</span><span class="o">()-</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">digitList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">intValue</span><span class="o">()</span> <span class="o">&gt;=</span> <span class="n">digitList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">).</span><span class="na">intValue</span><span class="o">()){</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="mi">2019</span> <span class="mi">3</span><span class="no">B</span><span class="o">.</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBalanced</span><span class="o">(</span><span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">delimiters</span><span class="o">){</span>
+ <span class="kt">int</span> <span class="n">openCount</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+ <span class="kt">int</span> <span class="n">closeCount</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+ <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">str</span> <span class="o">:</span> <span class="n">delimiters</span><span class="o">){</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">openDel</span><span class="o">)){</span>
+    <span class="n">openCount</span><span class="o">++;</span>
+  <span class="o">}</span> <span class="k">else</span><span class="o">{</span>
+    <span class="n">closeCount</span><span class="o">++;</span>
+  <span class="o">}</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">closeCount</span> <span class="o">&gt;</span> <span class="n">openCount</span><span class="o">){</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+  <span class="o">}</span>
+ <span class="o">}</span>
+ <span class="k">if</span> <span class="o">(</span><span class="n">openCount</span> <span class="o">==</span> <span class="n">closeCount</span><span class="o">){</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+ <span class="o">}</span>
+ <span class="k">else</span><span class="o">{</span>
+ <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+ <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<h1 id="unit-4---iteration">Unit 4 - Iteration</h1>
+<p>Iteration is worth 25% of the test so its pretty important. While loops, for loops, and recursion loops are types of loops. Another example is nested iteration, which can put a loop inside another loop.</p>
+
+<p>Part 1:</p>
+<pre><code class="language-Java">import javax.swing.JOptionPane;
+import java.util.Random;
+
+public class NumGuesser {
+    Random rand = new Random();
+        boolean numCorrect = false;
+        String uGuess = "";
+        int numGuesses=0;
+    
+    void run(){
+        
+        int randNum = rand.nextInt(1000);
+        while(numCorrect==false){
+            uGuess = JOptionPane.showInputDialog("Guess the number between 1-1000");
+            int uGuessNum = Integer.parseInt(uGuess);
+            if(uGuessNum&gt;randNum){
+                JOptionPane.showMessageDialog(null, "Guess too high, try again. Previous guess: "+uGuessNum);
+                numGuesses+=1;
+            }else if(uGuessNum&lt;randNum){
+                JOptionPane.showMessageDialog(null, "Guess too low, try again. Previous guess: "+uGuessNum);
+                numGuesses+=1;
+            }else if(uGuessNum==randNum){
+                JOptionPane.showMessageDialog(null, "Correct! It took you "+numGuesses+" guesses to get it correct");
+                numCorrect=true;
+            }
+        }
+    }
+    public static void main(String[] args) {
+        NumGuesser ng = new NumGuesser();
+        ng.run();
+    }
+}
+</code></pre>
+
+<p>Part Two:
+<img src="https://user-images.githubusercontent.com/34950822/200496120-0a2aa3a8-0651-4826-b569-fb1a172ac83e.png" alt="Screen Shot 2022-11-07 at 10 59 32 PM" /></p>
+
 
   </div>
 
