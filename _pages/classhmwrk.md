@@ -24,4 +24,100 @@ public int compareCustomer(Customer other) {
 }
 ```
 
+# Unit 2 - OOP
+OOP or object oriented programming is a type of programming language. Classes are a template or blueprint from which objects are created. Objects are instances of a class. Methods are a set of code that perform a specific task. Classes in java can hace data members, methods, constructors, nested classes, and interfaces. 
+
+[Link to Homework](https://adi-k-coding.github.io/tri1CSA/jupyter/2022/11/07/OOP.html)
+
+
+# Unit 3 - Boolean Expressions and If Statements
+If/else statements allow you to create a code segment that has checks. If/ElseIf/Else statments can be used to decide different program outputs depending on what the user inputted. Switch statements are also an alternative method to if statements. 
+
+HW:
+2009 3A. 
+```java
+private int getChargingCost(int startHour, int chargeTime)
+{
+ int cost = 0;
+ for (int x = 0; x < chargeTime; x++){
+  cost += this.rateTable[(startHour + x) % 24];
+ }
+ return cost;
+} 
+```
+
+2017 1B.
+```java
+public boolean isStrictlyIncreasing(){
+for (int i = 0; i < digitList.size()-1; i++){
+  if (digitList.get(i).intValue() >= digitList.get(i+1).intValue()){
+    return false;
+   }
+}
+return true;
+}
+
+2019 3B.
+public boolean isBalanced(ArrayList<String> delimiters){
+ int openCount = 0;
+ int closeCount = 0;
+ for (String str : delimiters){
+  if (str.equals(openDel)){
+    openCount++;
+  } else{
+    closeCount++;
+  }
+  if (closeCount > openCount){
+    return false;
+  }
+ }
+ if (openCount == closeCount){
+  return true;
+ }
+ else{
+ return false;
+ }
+}
+```
+# Unit 4 - Iteration
+Iteration is worth 25% of the test so its pretty important. While loops, for loops, and recursion loops are types of loops. Another example is nested iteration, which can put a loop inside another loop. 
+
+Part 1:
+```Java
+import javax.swing.JOptionPane;
+import java.util.Random;
+
+public class NumGuesser {
+    Random rand = new Random();
+        boolean numCorrect = false;
+        String uGuess = "";
+        int numGuesses=0;
+    
+    void run(){
+        
+        int randNum = rand.nextInt(1000);
+        while(numCorrect==false){
+            uGuess = JOptionPane.showInputDialog("Guess the number between 1-1000");
+            int uGuessNum = Integer.parseInt(uGuess);
+            if(uGuessNum>randNum){
+                JOptionPane.showMessageDialog(null, "Guess too high, try again. Previous guess: "+uGuessNum);
+                numGuesses+=1;
+            }else if(uGuessNum<randNum){
+                JOptionPane.showMessageDialog(null, "Guess too low, try again. Previous guess: "+uGuessNum);
+                numGuesses+=1;
+            }else if(uGuessNum==randNum){
+                JOptionPane.showMessageDialog(null, "Correct! It took you "+numGuesses+" guesses to get it correct");
+                numCorrect=true;
+            }
+        }
+    }
+    public static void main(String[] args) {
+        NumGuesser ng = new NumGuesser();
+        ng.run();
+    }
+}
+```
+
+Part Two:
+![Screen Shot 2022-11-07 at 10 59 32 PM](https://user-images.githubusercontent.com/34950822/200496120-0a2aa3a8-0651-4826-b569-fb1a172ac83e.png)
 
