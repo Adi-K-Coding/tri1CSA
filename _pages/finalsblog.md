@@ -19,6 +19,20 @@ Question 25 | A | D | The correct answer is options I and II instead of just I. 
 Question 30 | D | C | The correct answer is C "liercom" and not D "liercomp" because D would be the value returned if the second call to word.substring was word.substring(0, howFar + 1) due to the extra index. Thus C is the correct answer because the call is just howFar and not howFar + 1.
 Question 37 | D | E | The correct options are I and III only, and not II. II does not work because it iterates as long as is not equal to 6. Since the code segment iterates through odd numbbers, it will never be equal to six. Thus, this results in an infinite loop which never terminates. 
 
+# NATM 
 
+![Screen Shot 2022-11-07 at 9 56 45 PM](https://user-images.githubusercontent.com/34950822/200486432-46222aca-b437-4b17-b397-98744ea6b42a.png)
+
+![Screen Shot 2022-11-07 at 9 57 00 PM](https://user-images.githubusercontent.com/34950822/200486478-6bba9f79-f26a-4769-b908-429c7c5357d5.png)
+
+![Screen Shot 2022-11-07 at 9 57 11 PM](https://user-images.githubusercontent.com/34950822/200486528-39f6d0e8-051d-4466-90f3-df818ee969e5.png)
+
+![Screen Shot 2022-11-07 at 9 57 30 PM](https://user-images.githubusercontent.com/34950822/200486569-779284c4-8904-4478-9240-d72881550334.png)
+
+![Screen Shot 2022-11-07 at 9 57 43 PM](https://user-images.githubusercontent.com/34950822/200486607-d351e75f-67d4-49d8-bb70-c112ddc07afe.png)
+
+![Screen Shot 2022-11-07 at 9 57 55 PM](https://user-images.githubusercontent.com/34950822/200486645-292e249a-45fc-4e85-95e2-d3f66efca272.png)
+
+![Screen Shot 2022-11-07 at 9 58 04 PM](https://user-images.githubusercontent.com/34950822/200486670-c3337835-9362-4aad-9905-1c4b6f2bbb4b.png)
 
 
