@@ -187,6 +187,33 @@ public class NumGuesser {
 <p>Part Two:
 <img src="https://user-images.githubusercontent.com/34950822/200496120-0a2aa3a8-0651-4826-b569-fb1a172ac83e.png" alt="Screen Shot 2022-11-07 at 10 59 32 PM" /></p>
 
+<h1 id="unit-5---writing-classes">Unit 5 - Writing Classes</h1>
+<p>Classes are a blueprint for instantiating objects. An object is an istance of a class, a class defines an abstract type, methods are the behaviors you get objects to perform. Constructors create the object, are a special method for object instantiation, default constructor has no arguements. Accessor methods are getters and setters, which allow you to get values of variables and return a copy, or edit a variable.</p>
+
+<p>2021 1A.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">scoreGuess</span> <span class="o">(</span><span class="nc">String</span> <span class="n">guess</span><span class="o">){</span>
+  <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">secret</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">-</span> <span class="n">guess</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++){</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">secret</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">guess</span><span class="o">.</span><span class="na">length</span><span class="o">()).</span><span class="na">equals</span> <span class="o">(</span><span class="n">guess</span><span class="o">)){</span>
+        <span class="n">count</span><span class="o">++;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">count</span> <span class="o">*</span> <span class="n">guess</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">*</span> <span class="n">guess</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>2021 3A.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMembers</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">names</span><span class="o">,</span> <span class="kt">int</span> <span class="n">gradYear</span> <span class="o">){</span>
+    
+  <span class="k">for</span><span class="o">(</span> <span class="nc">String</span> <span class="n">n</span> <span class="o">:</span> <span class="n">names</span> <span class="o">){</span>
+    <span class="n">memberList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">MemberInfo</span><span class="o">(</span> <span class="n">n</span><span class="o">,</span> <span class="n">gradYear</span><span class="o">,</span> <span class="kc">true</span><span class="o">)</span> <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+<h1 id="unit-6---array">Unit 6 - Array</h1>
+<p><a href="https://adi-k-coding.github.io/tri1CSA/jupyter/2022/11/07/array.html">Link to Homework</a></p>
+
 
   </div>
 
