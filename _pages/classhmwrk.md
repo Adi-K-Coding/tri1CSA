@@ -6,6 +6,8 @@ permalink: /classhmwrk/
 
 # Unit 1 - Primitives
 Primitives are predefined, lowercase, "Primitives", which cannot call methods, are a value, and can be different sizes based on what primitive it is. Non primitives are defined by the coder, are uppercase, "Reference types", which can call methods, can be null, and are all the same size
+
+### Homework
 2A. 
 ```java
 public double purchasePrice() {
@@ -33,7 +35,7 @@ OOP or object oriented programming is a type of programming language. Classes ar
 # Unit 3 - Boolean Expressions and If Statements
 If/else statements allow you to create a code segment that has checks. If/ElseIf/Else statments can be used to decide different program outputs depending on what the user inputted. Switch statements are also an alternative method to if statements. 
 
-HW:
+### Homework
 2009 3A. 
 ```java
 private int getChargingCost(int startHour, int chargeTime)
@@ -82,6 +84,7 @@ public boolean isBalanced(ArrayList<String> delimiters){
 # Unit 4 - Iteration
 Iteration is worth 25% of the test so its pretty important. While loops, for loops, and recursion loops are types of loops. Another example is nested iteration, which can put a loop inside another loop. 
 
+### Homework
 Part 1:
 ```Java
 import javax.swing.JOptionPane;
@@ -124,6 +127,7 @@ Part Two:
 # Unit 5 - Writing Classes
 Classes are a blueprint for instantiating objects. An object is an istance of a class, a class defines an abstract type, methods are the behaviors you get objects to perform. Constructors create the object, are a special method for object instantiation, default constructor has no arguements. Accessor methods are getters and setters, which allow you to get values of variables and return a copy, or edit a variable. 
 
+### Homework
 2021 1A. 
 ```java
 public int scoreGuess (String guess){
@@ -148,7 +152,9 @@ public void addMembers(String[] names, int gradYear ){
 
 ```
 # Unit 6 - Array
-Notes: Common errors when making arrays include bound errors, unfilled and uninitialized arrays, when you allocate, or assign a single array variable, but not the whole array. You can use for loops to iterate through an array, by using array.length
+Notes: Common errors when making arrays include bound errors, unfilled and uninitialized arrays, when you allocate, or assign a single array variable, but not the whole array. You can use for loops to iterate through an array, by using array.length. 
+
+### Homework
 [Link to Homework](https://adi-k-coding.github.io/tri1CSA/jupyter/2022/11/07/array.html)
 
 
