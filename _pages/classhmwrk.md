@@ -121,3 +121,32 @@ public class NumGuesser {
 Part Two:
 ![Screen Shot 2022-11-07 at 10 59 32 PM](https://user-images.githubusercontent.com/34950822/200496120-0a2aa3a8-0651-4826-b569-fb1a172ac83e.png)
 
+# Unit 5 - Writing Classes
+Classes are a blueprint for instantiating objects. An object is an istance of a class, a class defines an abstract type, methods are the behaviors you get objects to perform. Constructors create the object, are a special method for object instantiation, default constructor has no arguements. Accessor methods are getters and setters, which allow you to get values of variables and return a copy, or edit a variable. 
+
+2021 1A. 
+```java
+public int scoreGuess (String guess){
+  int count = 0;
+  for (int i = 0; i <= secret.length() - guess.length(); i++){
+    if (secret.substring(i, i + guess.length()).equals (guess)){
+        count++;
+    }
+}
+return count * guess.length() * guess.length();
+}
+```
+
+2021 3A.
+```java
+public void addMembers(String[] names, int gradYear ){
+    
+  for( String n : names ){
+    memberList.add(new MemberInfo( n, gradYear, true) );
+  }
+}
+
+```
+# Unit 6 - Array
+[Link to Homework](https://adi-k-coding.github.io/tri1CSA/jupyter/2022/11/07/array.html)
+
