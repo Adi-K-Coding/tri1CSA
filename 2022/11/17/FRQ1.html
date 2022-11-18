@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -365,10 +365,7 @@ window.onload = wrap_img;
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">firstDayOfYear</span><span class="p">;</span>
 
     <span class="c1">// zero argument constructor</span>
-    <span class="kd">public</span> <span class="nf">Day</span><span class="p">()</span> <span class="p">{</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setStuff</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Day</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">year</span> <span class="o">=</span> <span class="n">year</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">month</span> <span class="o">=</span> <span class="n">month</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">day</span> <span class="o">=</span> <span class="n">day</span><span class="p">;</span>
@@ -376,6 +373,15 @@ window.onload = wrap_img;
         <span class="k">this</span><span class="p">.</span><span class="na">setDayOfYear</span><span class="p">();</span>
         <span class="k">this</span><span class="p">.</span><span class="na">setFirstDayOfYear</span><span class="p">();</span>
     <span class="p">}</span>
+
+    <span class="c1">// public void setDate(int month, int year, int day) {</span>
+    <span class="c1">//     this.year = year;</span>
+    <span class="c1">//     this.month = month;</span>
+    <span class="c1">//     this.day = day;</span>
+    <span class="c1">//     this.setDayOfWeek();</span>
+    <span class="c1">//     this.setDayOfYear();</span>
+    <span class="c1">//     this.setFirstDayOfYear();</span>
+    <span class="c1">// }</span>
 
     <span class="cm">/* dayOfYear getter/setters */</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getDayOfYear</span><span class="p">()</span> <span class="p">{</span>
@@ -417,8 +423,8 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Day</span> <span class="n">dayobj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Day</span><span class="p">();</span>
-        <span class="n">dayobj</span><span class="p">.</span><span class="na">setStuff</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">Day</span> <span class="n">dayobj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Day</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="c1">// dayobj.setDate(3, 2016, 1);</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">dayobj</span><span class="p">.</span><span class="na">jSONFormat</span><span class="p">());</span>
     <span class="p">}</span>
@@ -434,10 +440,97 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Examples-of-FrontEnd-Display">Examples of FrontEnd Display<a class="anchor-link" href="#Examples-of-FrontEnd-Display"> </a></h1>
+<h1 id="Controller">Controller<a class="anchor-link" href="#Controller"> </a></h1>
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">package</span> <span class="nn">com.nighthawk.spring_portfolio.mvc.calendar</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.http.ResponseEntity</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.PathVariable</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.core.JsonProcessingException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.JsonMappingException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.JsonNode</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.ObjectMapper</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Calendar API</span>
+<span class="cm"> * Calendar Endpoint: /api/calendar/isLeapYear/2022, Returns:</span>
+<span class="cm"> * {&quot;year&quot;:2020,&quot;isLeapYear&quot;:false}</span>
+<span class="cm"> */</span>
+<span class="nd">@RestController</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;/api/calendar&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CalendarApiController</span> <span class="p">{</span>
+
+  <span class="cm">/**</span>
+<span class="cm">   * GET isLeapYear endpoint</span>
+<span class="cm">   * ObjectMapper throws exceptions on bad JSON</span>
+<span class="cm">   *</span>
+<span class="cm">   * @throws JsonProcessingException</span>
+<span class="cm">   * @throws JsonMappingException</span>
+<span class="cm">   */</span>
+  <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/isLeapYear/{year}&quot;</span><span class="p">)</span>
+  <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">JsonNode</span><span class="o">&gt;</span> <span class="nf">getIsLeapYear</span><span class="p">(</span><span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
+      <span class="kd">throws</span> <span class="n">JsonMappingException</span><span class="p">,</span> <span class="n">JsonProcessingException</span> <span class="p">{</span>
+    <span class="c1">// Backend Year Object</span>
+    <span class="n">Year</span> <span class="n">year_obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Year</span><span class="p">();</span>
+    <span class="n">year_obj</span><span class="p">.</span><span class="na">setYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span> <span class="c1">// evaluates Leap Year</span>
+
+    <span class="c1">// Turn Year Object into JSON</span>
+    <span class="n">ObjectMapper</span> <span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="p">();</span>
+    <span class="n">JsonNode</span> <span class="n">json</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">.</span><span class="na">readTree</span><span class="p">(</span><span class="n">year_obj</span><span class="p">.</span><span class="na">isLeapYearToString</span><span class="p">());</span> <span class="c1">// this requires exception handling</span>
+
+    <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="n">json</span><span class="p">);</span> <span class="c1">// JSON response, see ExceptionHandlerAdvice for throws</span>
+  <span class="p">}</span>
+
+  <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/numberOfLeapYears/{year1}/{year2}&quot;</span><span class="p">)</span>
+  <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">JsonNode</span><span class="o">&gt;</span> <span class="nf">numberOfLeapYears</span><span class="p">(</span><span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">year1</span><span class="p">,</span> <span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">)</span>
+      <span class="kd">throws</span> <span class="n">JsonMappingException</span><span class="p">,</span> <span class="n">JsonProcessingException</span> <span class="p">{</span>
+
+    <span class="c1">// Turn Year Object into JSON</span>
+    <span class="n">ObjectMapper</span> <span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="p">();</span>
+    <span class="n">JsonNode</span> <span class="n">json</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">.</span><span class="na">readTree</span><span class="p">(</span><span class="s">&quot;{ \&quot;count\&quot;: &quot;</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">numberOfLeapYears</span><span class="p">(</span><span class="n">year1</span><span class="p">,</span> <span class="n">year2</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; } &quot;</span><span class="p">);</span> <span class="c1">// handling</span>
+
+    <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="n">json</span><span class="p">);</span> <span class="c1">// JSON response, see ExceptionHandlerAdvice for throws</span>
+  <span class="p">}</span>
+
+  <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/date/{year}/{month}/{day}&quot;</span><span class="p">)</span>
+  <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">JsonNode</span><span class="o">&gt;</span> <span class="nf">dayInfo</span><span class="p">(</span><span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">year</span><span class="p">,</span> <span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">day</span><span class="p">)</span>
+      <span class="kd">throws</span> <span class="n">JsonMappingException</span><span class="p">,</span> <span class="n">JsonProcessingException</span> <span class="p">{</span>
+
+    <span class="c1">// Turn Year Object into JSON</span>
+    <span class="n">Day</span> <span class="n">dayobj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Day</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">);</span>
+    <span class="c1">// dayobj.setStuff(month, year, day);</span>
+
+    <span class="n">ObjectMapper</span> <span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="p">();</span>
+    <span class="n">JsonNode</span> <span class="n">json</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">.</span><span class="na">readTree</span><span class="p">(</span><span class="n">dayobj</span><span class="p">.</span><span class="na">jSONFormat</span><span class="p">());</span> <span class="c1">// handling</span>
+
+    <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="n">json</span><span class="p">);</span> <span class="c1">// JSON response, see ExceptionHandlerAdvice for throws</span>
+  <span class="p">}</span>
+
+
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
