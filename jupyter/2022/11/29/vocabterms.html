@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -133,6 +133,14 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Casting(Truncating-or-Rounding)-">Casting(Truncating or Rounding)- </a></li>
 <li class="toc-entry toc-h3"><a href="#Wrapper-Classes--">Wrapper Classes - </a></li>
 <li class="toc-entry toc-h3"><a href="#Concatenation">Concatenation </a></li>
+<li class="toc-entry toc-h3"><a href="#Java-Math-Class--">Java Math Class - </a></li>
+<li class="toc-entry toc-h3"><a href="#Compound-Boolean-Expression">Compound Boolean Expression </a></li>
+<li class="toc-entry toc-h3"><a href="#Truth-Table">Truth Table </a></li>
+<li class="toc-entry toc-h3"><a href="#De-Morgan’s-Law">De Morgan’s Law </a></li>
+<li class="toc-entry toc-h3"><a href="#Comparing-Numbers">Comparing Numbers </a></li>
+<li class="toc-entry toc-h3"><a href="#Comparing-Strings">Comparing Strings </a></li>
+<li class="toc-entry toc-h3"><a href="#Comparing-Objects">Comparing Objects </a></li>
+<li class="toc-entry toc-h3"><a href="#For-Loop-and-Enhanced-For-Loop">For Loop and Enhanced For Loop </a></li>
 </ul>
 </li>
 </ul><!--
@@ -378,6 +386,335 @@ hello world 10 20
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Java-Math-Class--">
+<a class="anchor" href="#Java-Math-Class--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java Math Class -<a class="anchor-link" href="#Java-Math-Class--"> </a>
+</h3>
+<p>the java math class contains operations that can be used in code. It also contains values such as pi. For example Math.pi. Other functions include trig functions, log functions, and the random function.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.lang.Math</span><span class="p">;</span><span class="c1">//must be imported at start of program</span>
+<span class="kt">double</span> <span class="n">rand</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"random: "</span> <span class="o">+</span> <span class="n">rand</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Cos: "</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">cos</span><span class="p">(</span><span class="n">rand</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Log: "</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="n">rand</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Square Root: "</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">rand</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>random: 0.3938634112760282
+Cos 0.9234333367381666
+Log -0.931751101677047
+Square Root 0.6275853816621514
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Compound-Boolean-Expression">
+<a class="anchor" href="#Compound-Boolean-Expression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compound Boolean Expression<a class="anchor-link" href="#Compound-Boolean-Expression"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"First Expression"</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"True"</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"False"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>First Expression
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Truth-Table">
+<a class="anchor" href="#Truth-Table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Truth Table<a class="anchor-link" href="#Truth-Table"> </a>
+</h3>
+<p>boolean function that is a mathematical function that maps arguments to a value, where the allowable values of range (the function arguments) and domain (the function value) are just one of two values— true and false (or 0 and 1)
+NOT(x)=
+1 if x is 0
+0 if x is 1</p>
+<p>XOR(x,y)
+1 if x and y are different
+0 otherwise</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="De-Morgan’s-Law">
+<a class="anchor" href="#De-Morgan%E2%80%99s-Law" aria-hidden="true"><span class="octicon octicon-link"></span></a>De Morgan’s Law<a class="anchor-link" href="#De-Morgan%E2%80%99s-Law"> </a>
+</h3>
+<p>De Morgan's Law is a concept that shows that concepts in mathematics are related through their opposites. For example: not (A and B) -- not A or not B not (A or B) -- not A and not B</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="o">!</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="o">!</span><span class="n">a</span> <span class="o">||</span> <span class="o">!</span><span class="n">b</span><span class="p">)</span>
+<span class="o">!</span><span class="p">(</span><span class="n">a</span> <span class="o">||</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="o">!</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">b</span><span class="p">)</span>
+
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="kc">true</span><span class="o">==</span><span class="kc">false</span><span class="p">)){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Demonstrates De Morgans law"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparing-Numbers">
+<a class="anchor" href="#Comparing-Numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing Numbers<a class="anchor-link" href="#Comparing-Numbers"> </a>
+</h3>
+<p>comparing numbers is done through the == operator</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"true"</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"false"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">z</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"true"</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"false"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparing-Strings">
+<a class="anchor" href="#Comparing-Strings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing Strings<a class="anchor-link" href="#Comparing-Strings"> </a>
+</h3>
+<p>comparing strings is done through the .equals operator</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">String</span> <span class="n">word1</span> <span class="o">=</span> <span class="s">"world"</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">word2</span> <span class="o">=</span> <span class="s">"hello"</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">word3</span> <span class="o">=</span> <span class="s">"hello"</span><span class="p">;</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">word1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"world"</span><span class="p">)){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"true"</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"false"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">word2</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">word1</span><span class="p">)){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"true"</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"false"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>true
+false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparing-Objects">
+<a class="anchor" href="#Comparing-Objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing Objects<a class="anchor-link" href="#Comparing-Objects"> </a>
+</h3>
+<p>comparing objects is done through ==</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Integer</span> <span class="n">x</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">Integer</span> <span class="n">y</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">Integer</span> <span class="n">z</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"true"</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"false"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">z</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"true"</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"false"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>true
+false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-Loop-and-Enhanced-For-Loop">
+<a class="anchor" href="#For-Loop-and-Enhanced-For-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Loop and Enhanced For Loop<a class="anchor-link" href="#For-Loop-and-Enhanced-For-Loop"> </a>
+</h3>
+</div>
+</div>
+</div>
 </div>
 
 
