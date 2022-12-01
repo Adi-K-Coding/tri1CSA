@@ -4,6 +4,17 @@ title: Class Homeworks
 permalink: /classhmwrk/
 ---
 
+
+# Scores
+Unit Number | My Score 
+-- | -- 
+Unit 1 | N/A
+Unit 2 | N/A
+Unit 3 | 0.9/1 
+Unit 4 | N/A 
+Unit 5 | N/A 
+Unit 6 | N/A 
+
 # Unit 1 - Primitives
 Primitives are predefined, lowercase, "Primitives", which cannot call methods, are a value, and can be different sizes based on what primitive it is. Non primitives are defined by the coder, are uppercase, "Reference types", which can call methods, can be null, and are all the same size
 
