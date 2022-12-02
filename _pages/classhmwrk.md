@@ -9,11 +9,11 @@ permalink: /classhmwrk/
 
 Unit Number | My Score 
 -- | -- 
-Unit 1 | N/A
-Unit 2 | N/A
+Unit 1 | 0.9/1
+Unit 2 | 1
 Unit 3 | 0.9/1 
-Unit 4 | N/A 
-Unit 5 | N/A 
+Unit 4 | 1 
+Unit 5 | 0.85 
 Unit 6 | N/A 
 
 # Unit 1 - Primitives
