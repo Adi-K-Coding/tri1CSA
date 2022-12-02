@@ -14,7 +14,7 @@ Unit 2 | 1
 Unit 3 | 0.9/1 
 Unit 4 | 1 
 Unit 5 | 0.85 
-Unit 6 | N/A 
+Total | 4.75/5
 
 # Unit 1 - Primitives
 Primitives are predefined, lowercase, "Primitives", which cannot call methods, are a value, and can be different sizes based on what primitive it is. Non primitives are defined by the coder, are uppercase, "Reference types", which can call methods, can be null, and are all the same size
