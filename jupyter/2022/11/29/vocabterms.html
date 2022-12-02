@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      7 min read
     
 </span></p>
 
@@ -140,7 +140,12 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Comparing-Numbers">Comparing Numbers </a></li>
 <li class="toc-entry toc-h3"><a href="#Comparing-Strings">Comparing Strings </a></li>
 <li class="toc-entry toc-h3"><a href="#Comparing-Objects">Comparing Objects </a></li>
-<li class="toc-entry toc-h3"><a href="#For-Loop-and-Enhanced-For-Loop">For Loop and Enhanced For Loop </a></li>
+<li class="toc-entry toc-h3"><a href="#Constructors">Constructors </a></li>
+<li class="toc-entry toc-h3"><a href="#Access-Modifiers">Access Modifiers </a></li>
+<li class="toc-entry toc-h3"><a href="#This-Keyword">This Keyword </a></li>
+<li class="toc-entry toc-h3"><a href="#Inheritance-and-Extends-with-Examples-of-Subclass-and-Super-Keyword">Inheritance and Extends with Examples of Subclass and Super Keyword </a></li>
+<li class="toc-entry toc-h3"><a href="#Method-Overloading">Method Overloading </a></li>
+<li class="toc-entry toc-h3"><a href="#Standard-Methods">Standard Methods </a></li>
 </ul>
 </li>
 </ul><!--
@@ -709,9 +714,234 @@ false
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="For-Loop-and-Enhanced-For-Loop">
-<a class="anchor" href="#For-Loop-and-Enhanced-For-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Loop and Enhanced For Loop<a class="anchor-link" href="#For-Loop-and-Enhanced-For-Loop"> </a>
+<h3 id="Constructors">
+<a class="anchor" href="#Constructors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Constructors<a class="anchor-link" href="#Constructors"> </a>
 </h3>
+<p>Since constructor can only return the object to class, it's implicitly done by java runtime and we are not supposed to add a return type to it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Access-Modifiers">
+<a class="anchor" href="#Access-Modifiers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Access Modifiers<a class="anchor-link" href="#Access-Modifiers"> </a>
+</h3>
+<p>Access modifiers help to restrict the scope of a class, constructor, variable, method, or data member. The different types of access modifiers are the default, private, protected, and public.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">void</span> <span class="nf">HelloWorldDefault</span><span class="p">(){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">HelloWorldPublic</span><span class="p">(){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">private</span> <span class="kt">void</span> <span class="nf">HelloWorldPrivate</span><span class="p">(){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">HelloWorldProtected</span><span class="p">(){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="This-Keyword">
+<a class="anchor" href="#This-Keyword" aria-hidden="true"><span class="octicon octicon-link"></span></a>This Keyword<a class="anchor-link" href="#This-Keyword"> </a>
+</h3>
+<p>the "this" keyword implies that the object passed in as a member variable of the class is the value passed in when you create an object of that class. Additionally, this can also be used to invoke current class constructor, invoke current class method, return the current class object, pass an argument in the method call, pass an argument in the constructor call</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Example</span><span class="p">{</span>
+    <span class="kt">int</span> <span class="n">ex</span><span class="p">;</span>
+
+    <span class="c1">// Constructor with a parameter</span>
+    <span class="kd">public</span> <span class="nf">Example</span><span class="p">(</span><span class="kt">int</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">ex</span> <span class="o">=</span> <span class="n">ex</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Inheritance-and-Extends-with-Examples-of-Subclass-and-Super-Keyword">
+<a class="anchor" href="#Inheritance-and-Extends-with-Examples-of-Subclass-and-Super-Keyword" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inheritance and Extends with Examples of Subclass and Super Keyword<a class="anchor-link" href="#Inheritance-and-Extends-with-Examples-of-Subclass-and-Super-Keyword"> </a>
+</h3>
+<p>Inheritance in Java is the method to create a hierarchy between classes by inheriting from other classes.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">eats</span><span class="p">;</span>
+
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">numLegs</span><span class="p">;</span>
+
+	<span class="kd">public</span> <span class="nf">Animal</span><span class="p">(){}</span>
+
+	<span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="n">String</span> <span class="n">food</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">){</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">eats</span> <span class="o">=</span> <span class="n">food</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">numLegs</span> <span class="o">=</span> <span class="n">legs</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getEats</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">eats</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setEats</span><span class="p">(</span><span class="n">String</span> <span class="n">eats</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">eats</span> <span class="o">=</span> <span class="n">eats</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumLegs</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">numLegs</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNumLegs</span><span class="p">(</span><span class="kt">int</span> <span class="n">numLegs</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">numLegs</span> <span class="o">=</span> <span class="n">numLegs</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">extends</span> <span class="n">Animal</span><span class="p">{</span>
+
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span>
+
+	<span class="kd">public</span> <span class="nf">Cat</span><span class="p">(</span> <span class="n">String</span> <span class="n">food</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">super</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">legs</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="o">=</span><span class="s">"White"</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="nf">Cat</span><span class="p">(</span><span class="n">String</span> <span class="n">food</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">){</span>
+		<span class="kd">super</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">legs</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="o">=</span><span class="n">color</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getColor</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">color</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setColor</span><span class="p">(</span><span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+	<span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Method-Overloading">
+<a class="anchor" href="#Method-Overloading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Method Overloading<a class="anchor-link" href="#Method-Overloading"> </a>
+</h3>
+<p>Feature that allows classes to have more than one method with the same name, but different parameters</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Addition</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">first</span><span class="p">,</span> <span class="kt">int</span> <span class="n">second</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">first</span><span class="p">,</span> <span class="kt">int</span> <span class="n">second</span><span class="p">,</span> <span class="kt">int</span> <span class="n">third</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="n">second</span> <span class="o">+</span> <span class="n">third</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">//no errors when running</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Standard-Methods">
+<a class="anchor" href="#Standard-Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard Methods<a class="anchor-link" href="#Standard-Methods"> </a>
+</h3>
+<p>The standard methods of classes are the methods that you can use on objects in that class</p>
+
 </div>
 </div>
 </div>
