@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Title",
+            "title": "LightBoard College Board FRQ 4",
             "content": "public class LightBoard{ /** The lights on the board, where true represents on and false represents off. */ private boolean[][] lights; /** Constructs a LightBoard object having numRows rows and numCols columns. * Precondition: numRows &gt; 0, numCols &gt; 0 * Postcondition: each light has a 40% probability of being set to on. */ public LightBoard(int numRows, int numCols){ lights = new boolean[numRows][numCols]; for (int i = 0; i &lt; numRows; i++) {//for loops for (int j = 0; j &lt; numCols; j++) { lights[i][j] = Math.random() &lt; 0.4;// random chance of being on 40 percent } } } /** Evaluates a light in row index row and column index col and returns a status * as described in part (b). * Precondition: row and col are valid indexes in lights. */ public boolean evaluateLight(int row, int col){ //first find out how many are on in column int columnLights = 0; for (int i = 0; i &lt; lights.length; i++) { if (lights[i][col]) { columnLights++; } } //next check conditions for light if (lights[row][col] == true &amp;&amp; columnLights % 2 == 0) {//first condition return false; } else if (lights[row][col] == false &amp;&amp; columnLights % 3 == 0) {//second condition return true; } else {//last condition return lights[row][col]; } } public static void main(String[] args) { //tester method LightBoard tester = new LightBoard(10,10); System.out.println(tester.evaluateLight(4,6)); System.out.println(tester.evaluateLight(6,1)); System.out.println(tester.evaluateLight(0,7)); System.out.println(tester.evaluateLight(9,9)); } } LightBoard.main(null); . true false false false .",
-            "url": "https://adi-k-coding.github.io/tri1CSA/2022/12/11/lightboard.html",
-            "relUrl": "/2022/12/11/lightboard.html",
+            "url": "https://adi-k-coding.github.io/tri1CSA/jupyter/2022/12/11/lightboard.html",
+            "relUrl": "/jupyter/2022/12/11/lightboard.html",
             "date": " • Dec 11, 2022"
         }
         
