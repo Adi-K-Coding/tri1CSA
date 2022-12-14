@@ -346,81 +346,101 @@ France: {group: A continent: Europe, jersey color: Blue}
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
- 
-    <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">){</span>
-       <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-       <span class="k">this</span><span class="p">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">;</span>
-       <span class="k">this</span><span class="p">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
-    <span class="p">}</span>
- 
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">(){</span>
-       <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
-    <span class="p">}</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
 
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="p">(){</span>
-        <span class="n">age</span><span class="p">;</span>
-    <span class="p">}</span>
+   <span class="kd">public</span> <span class="nf">Person</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+   <span class="p">}</span>
 
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+   <span class="p">}</span>
 
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">age</span><span class="p">;</span>
+   <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">Person</span> <span class="n">Bob</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">,</span> <span class="s">"Jan 1,2000"</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
       <span class="n">Student</span> <span class="n">Ted</span> <span class="o">=</span> <span class="n">Bob</span><span class="p">.</span><span class="na">new</span> <span class="nf">Student</span><span class="p">(</span><span class="s">"Ted"</span><span class="p">,</span> <span class="s">"Jan 2, 2010"</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
       <span class="n">Teacher</span> <span class="n">MsSmith</span> <span class="o">=</span> <span class="n">Bob</span><span class="p">.</span><span class="na">new</span> <span class="nf">Teacher</span><span class="p">(</span><span class="s">"Ms. Smith"</span><span class="p">,</span> <span class="s">"Jan 5, 1999"</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">"Computer Science"</span><span class="p">);</span>
       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Ted</span><span class="p">);</span>
       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">MsSmith</span><span class="p">);</span>
-  <span class="p">}</span>
+   <span class="p">}</span>
 
-<span class="p">}</span>
- 
- <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">numFriends</span><span class="p">;</span>
- 
-    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numFriends</span><span class="p">)</span> <span class="p">{</span>
-       <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">,</span> <span class="n">age</span><span class="p">);</span>
-       <span class="k">this</span><span class="p">.</span><span class="na">grade</span> <span class="o">=</span> <span class="n">grade</span><span class="p">;</span>
-       <span class="k">this</span><span class="p">.</span><span class="na">gpa</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
-       <span class="k">this</span><span class="p">.</span><span class="na">numFriends</span> <span class="o">=</span> <span class="n">numFriends</span><span class="p">;</span>
-    <span class="p">}</span>
- 
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getGrade</span><span class="p">(){</span>
-       <span class="k">return</span> <span class="n">grade</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumFriends</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="n">numFriends</span><span class="p">;</span>
-     <span class="p">}</span>
-     <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">name</span> <span class="o">+</span> <span class="s">": {"</span> <span class="o">+</span> <span class="s">"group: "</span> <span class="o">+</span> <span class="n">group</span> <span class="o">+</span> <span class="s">" continent: "</span> <span class="o">+</span> <span class="n">continent</span> <span class="o">+</span> <span class="s">", jersey color: "</span> <span class="o">+</span> <span class="n">jerseyColor</span>
-                    <span class="o">+</span> <span class="s">"}"</span><span class="p">;</span>
-        <span class="p">}</span>
- <span class="p">}</span>
+   <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
+      <span class="kd">private</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">;</span>
+      <span class="kd">private</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">;</span>
+      <span class="kd">private</span> <span class="kt">int</span> <span class="n">numFriends</span><span class="p">;</span>
 
- <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">classes</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">subject</span><span class="p">;</span>
- 
-    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="kt">int</span> <span class="n">classes</span><span class="p">,</span> <span class="n">String</span> <span class="n">subject</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">public</span> <span class="nf">Student</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numFriends</span><span class="p">)</span> <span class="p">{</span>
+         <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">,</span> <span class="n">age</span><span class="p">);</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">grade</span> <span class="o">=</span> <span class="n">grade</span><span class="p">;</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">gpa</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">numFriends</span> <span class="o">=</span> <span class="n">numFriends</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getGrade</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="n">grade</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumFriends</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="n">numFriends</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="n">name</span> <span class="o">+</span> <span class="s">": {"</span> <span class="o">+</span> <span class="s">"gpa: "</span> <span class="o">+</span> <span class="n">gpa</span> <span class="o">+</span> <span class="s">" grade: "</span> <span class="o">+</span> <span class="n">grade</span> <span class="o">+</span> <span class="s">"}"</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
+      <span class="kd">private</span> <span class="kt">int</span> <span class="n">classes</span><span class="p">;</span>
+      <span class="kd">private</span> <span class="n">String</span> <span class="n">subject</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Teacher</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="kt">int</span> <span class="n">classes</span><span class="p">,</span> <span class="n">String</span> <span class="n">subject</span><span class="p">)</span> <span class="p">{</span>
        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">,</span> <span class="n">age</span><span class="p">);</span>
        <span class="k">this</span><span class="p">.</span><span class="na">classes</span> <span class="o">=</span> <span class="n">classes</span><span class="p">;</span>
        <span class="k">this</span><span class="p">.</span><span class="na">subject</span> <span class="o">=</span> <span class="n">subject</span><span class="p">;</span>
     <span class="p">}</span>
- 
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumClasses</span><span class="p">(){</span>
-       <span class="k">return</span> <span class="n">classes</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSubject</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="n">subject</span><span class="p">;</span>
-     <span class="p">}</span>
- <span class="p">}</span>
+
+      <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumClasses</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="n">classes</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSubject</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="n">subject</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="n">name</span> <span class="o">+</span> <span class="s">": {"</span> <span class="o">+</span> <span class="s">"number of classes: "</span> <span class="o">+</span> <span class="n">classes</span> <span class="o">+</span> <span class="s">" subject: "</span> <span class="o">+</span> <span class="n">subject</span> <span class="o">+</span> <span class="s">"}"</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Person</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Bob: {gpa: 4.0 grade: 11}
+Bob: {number of classes: 4 subject: Computer Science}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
